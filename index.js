@@ -13,6 +13,9 @@ const questions = [
     "License?",                                             //6
     "GitHub username: ",                                    //7
     "Email Address: ",                                      //8
+    "URL to Git Repository: ",                              //9
+    "URL to Deployed page",                                 //10
+    "Image to include: "
 ];
 
 // TODO: Create a function to write README file
@@ -67,9 +70,66 @@ function writeToFile(fileName, data) {
           type: 'input',
           message: data[8],
           name: 'email',
+        },
+        {
+          type: "input",
+          message: data[9],
+          name: "urlGit",
+        },
+        {
+          type: "input",
+          message: data[10],
+          name: "urlDeploy",
+        },
+        {
+          type: "input",
+          message: data[11],
+          name: "image",
         }
-      ]);
-}
+    ])
+    .then((answers) => {
+        const {title, description, install, uses, contributions, testing, license, GitUser, email, urlGit, urlDeploy, image} = answers;
+        const readme =
+        `# ${title}
+
+        ## Table of Contents
+
+        * [Installation](#installation)
+        * [Usage](#usage)
+        * [Credits](#credits)
+        * [License](#license)
+        
+        ## Installation
+
+        ${install}
+
+        ## Description
+        
+        ${description}
+        
+        ## URLs
+        
+        GitHub repository: ${urlGit}
+        
+        Webpage: ${urlDeploy}
+        
+        ## Usage
+        
+        ${uses}
+        
+        ## Images
+        
+        ![alt website](${image})
+        
+        ## Credits
+        
+        All information gathered is from Open Weather API
+        
+        ## License
+        
+        No licenses`
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {
