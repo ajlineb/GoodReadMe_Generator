@@ -15,7 +15,8 @@ const questions = [
     "Email Address: ",                                      //8
     "URL to Git Repository: ",                              //9
     "URL to Deployed page",                                 //10
-    "Image to include: "
+    "Image to include: ",                                   //11
+    "Credits To: "                                          //12
 ];
 
 // TODO: Create a function to write README file
@@ -42,6 +43,11 @@ function writeToFile(fileName, data) {
           name: 'uses',
         },
         {
+          type: "input",
+          message: data[11],
+          name: "image",
+        },
+        {
           type: 'input',
           message: data[4],
           name: 'contributions',
@@ -60,6 +66,11 @@ function writeToFile(fileName, data) {
               "Apache License",
               "GPL License",
             ],
+        },
+        {
+          type: "input",
+          message: data[12],
+          name: "credits",
         },
         {
           type: 'input',
@@ -81,23 +92,37 @@ function writeToFile(fileName, data) {
           message: data[10],
           name: "urlDeploy",
         },
-        {
-          type: "input",
-          message: data[11],
-          name: "image",
-        }
+
     ])
     .then((answers) => {
-        const {title, description, install, uses, contributions, testing, license, GitUser, email, urlGit, urlDeploy, image} = answers;
+        const {title, description, install, uses, contributions, testing, license, GitUser, email, urlGit, urlDeploy, image, credits} = answers;
+        if(license === "MIT License") {
+            const liType = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+            return liType;
+        };
+        if(license === "Apache License") {
+            const liType = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+            return liType;
+        };
+        if(license === "GPL License") {
+            const liType = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)";
+            return liType;
+        };
         const readme =
-        `# ${title}
+        `# ${title} ${liType}
 
         ## Table of Contents
 
         * [Installation](#installation)
+        * [Description](#description)
+        * [URLs](#urls)
         * [Usage](#usage)
+        * [Images](#images)
         * [Credits](#credits)
         * [License](#license)
+        * [Contributions](#contributions)
+        * [Tests](#tests)
+        * [Questions](#questions)
         
         ## Installation
 
@@ -123,11 +148,24 @@ function writeToFile(fileName, data) {
         
         ## Credits
         
-        All information gathered is from Open Weather API
+        ${credits}
         
         ## License
         
-        No licenses`
+        ${license} ${liType}
+
+        ## Contributions
+        
+        ${contributions}
+
+        ## Tests
+        
+        ${testing}
+        
+        ## Questions
+        
+        ${GitUser}  
+        ${email}`
     });
 };
 
