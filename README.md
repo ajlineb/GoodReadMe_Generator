@@ -1,5 +1,5 @@
 
-# re [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+# Good README.md Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
 ## Table of Contents  
 
@@ -16,29 +16,29 @@
 
 ## Installation  
 
-re  
+You must install inquirer, have node and use nodes built-in library fs. Then you can run the program with node index.js in the terminal.  
 
 ## Description  
 
-re  
+This file is used to make professional READMEs with very little aggrivation of remembering what to put into your README everytime. Instead it simply askes you what you should be putting in.  
 
 ## URLs  
 
-GitHub repository: re  
+GitHub repository: https://github.com/ajlineb/GoodReadMe_Generator  
 
-Webpage: re  
+Webpage: n/a  
 
 ## Usage  
 
-re  
+You can use this for all of your README needs and most projects should have one! This just makes it convienent!  
 
 ## Images  
 
-![alt website](re)  
+![alt website]()  
 
 ## Credits  
 
-re  
+UNC BootCamp for some starter code.  
 
 ## License  
 
@@ -46,13 +46,13 @@ MIT License
 
 ## Contributions  
 
-re  
+n/a  
 
 ## Tests  
 
-re  
+Simply run the program using node index.js in the terminal.  
 
 ## Questions  
 
-re
-re
+GitHub UserName: ajlineb
+Email: anthonylinebaugh95@gmail.com
