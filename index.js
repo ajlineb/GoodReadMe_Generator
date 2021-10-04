@@ -163,8 +163,8 @@ ${testing}
 
 ## Questions  
 
-Contact by:
-GitHub Username: ${GitUser}
+Contact by:  
+GitHub Username: ${GitUser}  
 Email: ${email}`;
         fs.writeFile(fileName, readme, (err) =>
         err ? console.error(err) : console.log('Successfully created an README file!')

@@ -54,5 +54,5 @@ Simply run the program using node index.js in the terminal.
 
 ## Questions  
 
-GitHub UserName: ajlineb
+GitHub UserName: ajlineb  
 Email: anthonylinebaugh95@gmail.com
