@@ -24,9 +24,9 @@ This file is used to make professional READMEs with very little aggrivation of r
 
 ## URLs  
 
-GitHub repository: https://github.com/ajlineb/GoodReadMe_Generator  
+GitHub repository: https://github.com/ajlineb/GoodReadMe_Generator#usage  
 
-Webpage: n/a  
+Video usage link: https://drive.google.com/file/d/1mTwufCMsU4n3g1aMRbi4MC_mdTT49ID4/view  
 
 ## Usage  
 
@@ -34,7 +34,7 @@ You can use this for all of your README needs and most projects should have one!
 
 ## Images  
 
-![alt website]()  
+![alt website](n/a)  
 
 ## Credits  
 
@@ -46,7 +46,7 @@ MIT License
 
 ## Contributions  
 
-n/a  
+To contribute you can send an email with ideas on what can be added and improvements!  
 
 ## Tests  
 
@@ -54,5 +54,6 @@ Simply run the program using node index.js in the terminal.
 
 ## Questions  
 
-GitHub UserName: ajlineb  
+Contact by:  
+GitHub Username: ajlineb  
 Email: anthonylinebaugh95@gmail.com
