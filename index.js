@@ -96,76 +96,78 @@ function writeToFile(fileName, data) {
     ])
     .then((answers) => {
         const {title, description, install, uses, contributions, testing, license, GitUser, email, urlGit, urlDeploy, image, credits} = answers;
+        var liType;
         if(license === "MIT License") {
-            const liType = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-            return liType;
+            liType = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
         };
         if(license === "Apache License") {
-            const liType = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-            return liType;
+            liType = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
         };
         if(license === "GPL License") {
-            const liType = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)";
-            return liType;
+            liType = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)";
         };
         const readme =
-        `# ${title} ${liType}
+`
+# ${title} ${liType}  
 
-        ## Table of Contents
+## Table of Contents  
 
-        * [Installation](#installation)
-        * [Description](#description)
-        * [URLs](#urls)
-        * [Usage](#usage)
-        * [Images](#images)
-        * [Credits](#credits)
-        * [License](#license)
-        * [Contributions](#contributions)
-        * [Tests](#tests)
-        * [Questions](#questions)
-        
-        ## Installation
+* [Installation](#installation)
+* [Description](#description)
+* [URLs](#urls)
+* [Usage](#usage)
+* [Images](#images)
+* [Credits](#credits)
+* [License](#license)
+* [Contributions](#contributions)
+* [Tests](#tests)
+* [Questions](#questions)
 
-        ${install}
+## Installation  
 
-        ## Description
-        
-        ${description}
-        
-        ## URLs
-        
-        GitHub repository: ${urlGit}
-        
-        Webpage: ${urlDeploy}
-        
-        ## Usage
-        
-        ${uses}
-        
-        ## Images
-        
-        ![alt website](${image})
-        
-        ## Credits
-        
-        ${credits}
-        
-        ## License
-        
-        ${license} ${liType}
+${install}  
 
-        ## Contributions
-        
-        ${contributions}
+## Description  
 
-        ## Tests
-        
-        ${testing}
-        
-        ## Questions
-        
-        ${GitUser}  
-        ${email}`
+${description}  
+
+## URLs  
+
+GitHub repository: ${urlGit}  
+
+Webpage: ${urlDeploy}  
+
+## Usage  
+
+${uses}  
+
+## Images  
+
+![alt website](${image})  
+
+## Credits  
+
+${credits}  
+
+## License  
+
+${license}  
+
+## Contributions  
+
+${contributions}  
+
+## Tests  
+
+${testing}  
+
+## Questions  
+
+${GitUser}
+${email}`;
+        fs.writeFile(fileName, readme, (err) =>
+        err ? console.error(err) : console.log('Successfully created an README file!')
+        );
     });
 };
 
