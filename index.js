@@ -21,6 +21,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+  //this will ask all the questions
     prompt([
         {
           type: 'input',
@@ -94,18 +95,20 @@ function writeToFile(fileName, data) {
         },
 
     ])
+    //this will write the README
     .then((answers) => {
-        const {title, description, install, uses, contributions, testing, license, GitUser, email, urlGit, urlDeploy, image, credits} = answers;
-        var liType;
+        const {title, description, install, uses, contributions, testing, license, GitUser, email, urlGit, urlDeploy, image, credits} = answers; //contains the answers from the user
+        var liType; //creating a var for license type for the next if statements
         if(license === "MIT License") {
-            liType = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+            liType = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"; //checks if MIT and gets the badge for it
         };
         if(license === "Apache License") {
-            liType = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+            liType = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"; //checks if Apache and gets badge
         };
         if(license === "GPL License") {
-            liType = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)";
+            liType = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)"; //checks if GPL and gets its badge
         };
+        //varaible containg all of the prewritten code and variables that will be added from the input of the user
         const readme =
 `
 # ${title} ${liType}  
@@ -166,6 +169,7 @@ ${testing}
 Contact by:  
 GitHub Username: ${GitUser}  
 Email: ${email}`;
+//writes the information stored in the readme variable and names it from the filename variable and if successful it console logs a message
         fs.writeFile(fileName, readme, (err) =>
         err ? console.error(err) : console.log('Successfully created an README file!')
         );
