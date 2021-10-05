@@ -15,7 +15,7 @@ const questions = [
     "Email Address: ",                                      //8
     "URL to Git Repository: ",                              //9
     "URL to Deployed page",                                 //10
-    "Image to include: ",                                   //11
+    "Image to include (type the path): ",                   //11
     "Credits To: "                                          //12
 ];
 
