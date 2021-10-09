@@ -167,7 +167,7 @@ ${testing}
 ## Questions  
 
 Contact by:  
-GitHub Username: ${GitUser}  
+GitHub Username: [${GitUser}](https://github.com/${GitUser})  
 Email: ${email}`;
 //writes the information stored in the readme variable and names it from the filename variable and if successful it console logs a message
         fs.writeFile(fileName, readme, (err) =>
