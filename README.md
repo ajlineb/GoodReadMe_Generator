@@ -1,5 +1,5 @@
 
-# Team Profile Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+# Good README.md Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
 ## Table of Contents  
 
@@ -16,29 +16,29 @@
 
 ## Installation  
 
-Make sure to have node installed and inquirer installed.  
+You must install inquirer, have node and use nodes built-in library fs. Then you can run the program with node index.js in the terminal.  
 
 ## Description  
 
-This application can be used to build your team and access their informaion when needed! You can add a manager, multiple engineers, and multiple interns. The prompts will ask diffrent questions based on the type of member (engineer/intern). Engineers will have a github and interns have a school field. When finished adding members to your team it will generate a html page fully styled and will put the Manager at the top followed by the engineers which are then followed by interns, making almost a tree/pyramid styled member list! Sending emails to your members are as easy as clicking their email, as it will bring up your default emailer so you can quickly send a message! Also your engineers github accounts can simply be clicked on to take you to their page. All of your team wrapped up in one page!  
+This file is used to make professional READMEs with very little aggrivation of remembering what to put into your README everytime. Instead it simply askes you what you should be putting in.  
 
 ## URLs  
 
-GitHub repository: https://github.com/ajlineb/Team-Profile-Generator  
+GitHub repository: https://github.com/ajlineb/GoodReadMe_Generator  
 
 Webpage: n/a  
 
 ## Usage  
 
-This application creates your team with simple questions and displays them on an html page fully styled with css. It makes it easier for building your team and getting in contact with your members.  
+You can use this for all of your README needs and most projects should have one! This just makes it convienent!  
 
 ## Images  
 
-![alt website](./images/teamProfileManager.png)  
+![alt website]()  
 
 ## Credits  
 
-Google fonts, and Bootstrap  
+UNC BootCamp for some starter code.  
 
 ## License  
 
@@ -50,10 +50,9 @@ n/a
 
 ## Tests  
 
-To test the project, in the console type: npm run test  
+Simply run the program using node index.js in the terminal.  
 
 ## Questions  
 
-Contact by:  
-GitHub Username: [ajlineb](https://github.com/ajlineb)  
+GitHub UserName: ajlineb  
 Email: anthonylinebaugh95@gmail.com
