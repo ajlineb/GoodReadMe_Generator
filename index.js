@@ -178,7 +178,7 @@ Email: ${email}`;
 
 // TODO: Create a function to initialize app
 function init() {
-    writeToFile("README.md", questions);
+    writeToFile("./dropOff/README.md", questions);
 }
 
 // Function call to initialize app
