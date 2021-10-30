@@ -1,5 +1,5 @@
 
-# Note Taker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+# SQL-Employee-Tracker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
 ## Table of Contents  
 
@@ -16,29 +16,29 @@
 
 ## Installation  
 
-To install this on your own server, you will need express for testing on your localhost and uuid for random Id creations.  
+User must first open terminal in the folder containing the index.js file. Use 'npm i' to install the dependencies. Make sure to have mysql installed so that they may seed their database with the employees in the db folder, but they must first do a source schema.sql; and then source seeds.sql; to setup the database. Then run node index.js to start the program.  
 
 ## Description  
 
-This application will allow you to save notes and click through them to bring them back up as needed. They are saved in a json file/database. This is great for anyone wanting to save notes on the go!  
+A terminal style updater and viewer for an employee database.   
 
 ## URLs  
 
-GitHub repository: https://github.com/ajlineb/Note_Taker  
+GitHub repository: https://github.com/ajlineb/SQL-Employee-Tracker  
 
-Webpage: https://note-taker-ajlineba.herokuapp.com/  
+Webpage: n/a  
 
 ## Usage  
 
-User will be able to save notes using a title and description, then when saved it will be docked to the left portion of the webpage. When clicked on the user will see the title and the note left back on the right side of the page. User can save as many notes as needed!  
+The user can keep up with their employees using multiple tables. They can see all of their employees and the managers of those employees. They will also be able to view all the departments and roles for each, while also seeing who belongs to what role and in what department with a salary. Updates can be made to the employees role, adding a new employee, department, and role.  
 
 ## Images  
 
-![alt website](./images/NoteTaker.png)  
+![alt website](./image/employeeDataBase.png)  
 
 ## Credits  
 
-UNC Chapel Hill BootCamp for start code.  
+asciiart-logo, for their image in the console, inquirer, console.table, and mysql2  
 
 ## License  
 
@@ -46,11 +46,11 @@ MIT License
 
 ## Contributions  
 
-Send an email and let me know what should be added!  
+email me and let me know what could be added!  
 
 ## Tests  
 
-Start up a localhost server and start typing in some notes!  
+run the program using node index.js  
 
 ## Questions  
 
